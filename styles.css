@@ -149,3 +149,29 @@ img {
   width: 40px;
   padding: 0.2rem;
 }
+
+/** footers **/
+
+.footer {
+  background-color: #5e832d;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.footer .link {
+  color: white;
+  transition: 0.3s;
+}
+.footer .link:hover {
+  color: rgba(255, 255, 255, 0.621);
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
