@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Register Manager</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="/image/harry-logo.svg">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
       .navigation .nav-brand >a{
@@ -45,23 +46,55 @@
         </li>
       </ul>
     </nav>
-    <main class="container1">
-      <div>
-        <h1 class="heading">Cash Register Manager</h1>
-        <p class="description">
-          Enter the bill amount and cash given by the customer and know minimum
-          number of notes to return.
-        </p>
-        <label class="input-label" for="bill-amount">Bill Amount:</label>
-        <input class="input" id="bill-amount" type="text" />
-        <!-- <button id="">Next</button> -->
-        <label class="input-label" for="cash-given">Cash Given:</label>
-        <input class="input" id="cash-given" type="text" />
-        <button id="check-button">Check</button>
-        <p id="error-message"></p>
+
+    <header>
+        <h1>Cash Register Manager</h1>
+    </header>
+
+    <form class="cash-register-form" id="cash-register-form" action="">
+
+        <div class="label-input-container">
+
+            <p class="description">
+                Enter the bill amount and cash given by the customer and know minimum
+                number of notes to return.
+            </p>
+
+            <div>
+                <label class="input-label" for="bill-amount">Bill Amount:</label>
+                <input class="input input-text" type="text" id="bill-amount" placeholder="Enter bill amount.." required/>
+            </div>  
+
+            <div>
+                <label class="input-label" for="cash-given">Cash Given:</label>
+                <input class="input input-text" type="text" id="cash-given" placeholder="Enter cash money to pay bill.." required/>
+            </div> 
+
+        </div>
+
+        <div id="flexbox">
+            <div >
+                <button class="btn-check" id="submit" type="submit">Check</button>
+            </div>
+            <div >
+                <button class="btn-check" id="clear" type="reset">Clear</button>
+            </div>
+        </div>
+
         <table class="change-table">
           <caption>
-            Return Change
+            Paid Cash vs Bill Amount
+          </caption>
+          <tr>
+            <th>Is paid cash greater than bill amount?</th>
+            <td class="flag"></td>
+            <td class="greeting"></td>
+          </tr>
+        </table>
+
+        <table class="change-table">
+          <caption>
+            Returnable Notes
           </caption>
           <tr>
             <th>No of Notes</th>
@@ -84,8 +117,9 @@
             <td>1</td>
           </tr>
         </table>
-      </div>
-    </main>
+
+    </form>
+
     <script src="script.js" type="text/javascript"></script>
 
     <footer class="footer">
