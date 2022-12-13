@@ -28,8 +28,11 @@ a {
   }
 
 .navigation .nav-pills {
-  text-align: right;
   margin: 0.6rem 1rem;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .navigation .link {
